@@ -1,0 +1,48 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or the definition README at
+// https://github.com/microsoft/vscode-dev-containers/tree/master/containers/python-3
+{
+    "name": "Python 3",
+    "context": "..",
+    "dockerFile": "Dockerfile",
+    // Use 'settings' to set *default* container specific settings.json values on container create. 
+    // You can edit these settings after create using File > Preferences > Settings > Remote.
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true,
+        "python.venvPath": "/home/vscode/.cache/pypoetry/virtualenvs",
+        "python.pythonPath": "/home/vscode/.cache/pypoetry/virtualenvs/django-rest-py3.7/bin/python",
+        "python.linting.pylintPath": "/home/vscode/.cache/pypoetry/virtualenvs/django-rest-py3.7/bin/pylint",
+        "python.formatting.provider": "black",
+        "python.formatting.blackArgs": [
+            "--line-length",
+            "120"
+        ]
+    },
+    // Uncomment the next line if you want to publish any ports.
+    "appPort": [
+        8000
+    ],
+    // Uncomment the next line to run commands after the container is created.
+    // "postCreateCommand": "pip install -r requirements.txt",
+    "postCreateCommand": "./python-postinstall.sh",
+    // Uncomment the next line to use a non-root user. On Linux, this will prevent
+    // new files getting created as root, but you may need to update the USER_UID
+    // and USER_GID in .devcontainer/Dockerfile to match your user if not 1000.
+    "runArgs": [
+        "-u",
+        "vscode",
+        "-v",
+        "${env:HOME}${env:USERPROFILE}/.ssh:/root/.ssh-localhost:ro"
+    ],
+    "workspaceMount": "src=${env:HOME}/workspace,dst=/workspace,type=bind,consistency=delegated",
+    "workspaceFolder": "/workspace",
+    // Add the IDs of extensions you want installed when the container is created in the array below.
+    "extensions": [
+        "ms-python.python",
+        "bungcip.better-toml",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "dsznajder.es7-react-js-snippets"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "name": "NodeJS",
+    "context": "..",
+    "dockerFile": "Dockerfile",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "emmet.includeLanguages": {
+            "javascript": "javascriptreact"
+        }
+    },
+    "appPort": [
+        8000
+    ],
+    "postCreateCommand": "/workspace/ssh-postinstall.sh",
+    "runArgs": [
+        "-u",
+        "node",
+        "-v",
+        "${env:HOME}${env:USERPROFILE}/.ssh:/root/.ssh-localhost:ro"
+    ],
+    "workspaceMount": "src=${env:HOME}/workspace,dst=/workspace,type=bind,consistency=delegated",
+    "workspaceFolder": "/workspace/gatsby-course",
+    "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "dsznajder.es7-react-js-snippets",
+        "syler.sass-indented",
+        "eamodio.gitlens"
+    ]
+}
