@@ -12,12 +12,15 @@ services:
     volumes:
       - ~/workspace:/workspace
       - ~/.ssh:/root/.ssh-localhost:ro
+    environment:
+      - DB_HOST=postgres
+      - DB_NAME=app
+      - DB_USER=app
 
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
     ports:
       - 8000:8000
-
 
   postgres:
     image: postgres:12-alpine
@@ -25,3 +28,6 @@ services:
     restart: unless-stopped
     ports:
       - 5432:5432
+    environment:
+      - POSTGRES_DB=app
+      - POSTGRES_USER=app

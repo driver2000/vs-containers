@@ -11,8 +11,6 @@
         "python.linting.enabled": true,
         "python.linting.pylintEnabled": true,
         "python.venvPath": "/home/vscode/.cache/pypoetry/virtualenvs",
-        "python.pythonPath": "/home/vscode/.cache/pypoetry/virtualenvs/django-rest-py3.7/bin/python",
-        "python.linting.pylintPath": "/home/vscode/.cache/pypoetry/virtualenvs/django-rest-py3.7/bin/pylint",
         "python.formatting.provider": "black",
         "python.formatting.blackArgs": [
             "--line-length",
