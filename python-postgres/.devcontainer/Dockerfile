@@ -44,7 +44,7 @@ USER $USERNAME
 RUN echo "alias ls='ls --color=auto'" >> ~/.bash_aliases \
     && echo "alias ll='ls -la'" >> ~/.bash_aliases \
     && echo "alias l='ls -d .* --color=auto'" >> ~/.bash_aliases \
-    && curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python \
+    && curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python \
     && echo "export PATH=$PATH:~/.poetry/bin" >> ~/.bashrc
 
 # Switch back to dialog for any ad-hoc use of apt-get
