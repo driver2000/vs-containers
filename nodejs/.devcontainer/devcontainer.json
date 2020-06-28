@@ -19,7 +19,7 @@
         "${env:HOME}${env:USERPROFILE}/.ssh:/root/.ssh-localhost:ro"
     ],
     "workspaceMount": "src=${env:HOME}/workspace,dst=/workspace,type=bind,consistency=delegated",
-    "workspaceFolder": "/workspace/gatsby-course",
+    "workspaceFolder": "/workspace",
     "extensions": [
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
