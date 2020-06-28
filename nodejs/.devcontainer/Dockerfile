@@ -33,8 +33,8 @@ RUN apt-get update \
     && apt-get update \
     && apt-get -y install --no-install-recommends yarn \
     #
-    # Install eslint and gatsby-cli globally
-    && npm install -g gatsby-cli eslint \
+    # Install eslint globally
+    && npm install -g eslint \
     #
     # [Optional] Update a non-root user to match UID/GID - see https://aka.ms/vscode-remote/containers/non-root-user.
     && if [ "$USER_GID" != "1000" ]; then groupmod node --gid $USER_GID; fi \
