@@ -18,10 +18,10 @@
         "python.formatting.blackArgs": [
             "--line-length",
             "100"
-        ],
+        ]
     },
     "postCreateCommand": "/workspace/ssh-postinstall.sh",
-    "workspaceFolder": "/workspace/recipe-app-api",
+    "workspaceFolder": "/workspace/",
     "extensions": [
         "ms-python.python",
         "bungcip.better-toml",
