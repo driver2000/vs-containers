@@ -1,7 +1,7 @@
 {
-    "name": "NodeJS",
-    "context": "..",
-    "dockerFile": "Dockerfile",
+    "name": "MERN",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "node",
     "settings": {
         "terminal.integrated.shell.linux": "/bin/bash",
         "emmet.includeLanguages": {
@@ -25,16 +25,9 @@
         "editor.insertSpaces": true
     },
     "forwardPorts": [
-        8000
+        3000
     ],
     "postCreateCommand": "/workspace/ssh-postinstall.sh",
-    "runArgs": [
-        "-u",
-        "node",
-        "-v",
-        "${env:HOME}${env:USERPROFILE}/.ssh:/root/.ssh-localhost:ro"
-    ],
-    "workspaceMount": "src=${env:HOME}/workspace/NodeJs,dst=/workspace,type=bind,consistency=delegated",
     "workspaceFolder": "/workspace",
     "extensions": [
         "dbaeumer.vscode-eslint",

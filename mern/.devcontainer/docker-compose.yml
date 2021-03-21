@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  node:
+    build:
+      context: ../../nodejs/.devcontainer/
+
+    depends_on:
+      - mongodb
+    
+    user: node
+    container_name: node-vscode
+    volumes:
+      - ~/workspace/NodeJs:/workspace
+      - ~/.ssh:/root/.ssh-localhost:ro
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
+
+  mongodb:
+    image: mongo:4-bionic
+    container_name: mongodb
+    restart: unless-stopped
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: secret
