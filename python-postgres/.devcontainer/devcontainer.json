@@ -4,8 +4,6 @@
     "name": "Python 3 & PostgreSQL",
     "dockerComposeFile": "docker-compose.yml",
     "service": "python",
-    // Use 'settings' to set *default* container specific settings.json values on container create.
-    // You can edit these settings after create using File > Preferences > Settings > Remote.
     "settings": {
         "terminal.integrated.shell.linux": "/bin/bash",
         "files.trimTrailingWhitespace": true,
@@ -18,7 +16,7 @@
         "python.languageServer": "Pylance",
         "python.formatting.blackArgs": [
             "--line-length",
-            "100"
+            "110"
         ]
     },
     "postCreateCommand": "/workspace/ssh-postinstall.sh",
@@ -26,7 +24,6 @@
     "extensions": [
         "ms-python.python",
         "bungcip.better-toml",
-        "ms-azuretools.vscode-docker",
         "eamodio.gitlens",
         "ms-python.vscode-pylance"
     ]
