@@ -5,7 +5,13 @@
     "dockerComposeFile": "docker-compose.yml",
     "service": "python",
     "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash",
+        "terminal.integrated.profiles.linux": {
+            "bash": {
+                "path": "/bin/bash",
+                "icon": "terminal-bash"
+            },
+        },
+        "terminal.integrated.defaultProfile.linux": "bash",
         "files.trimTrailingWhitespace": true,
         "python.venvPath": "/home/vscode/.cache/pypoetry/virtualenvs",
         "python.linting.enabled": true,

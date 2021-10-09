@@ -3,7 +3,13 @@
     "dockerComposeFile": "docker-compose.yml",
     "service": "node",
     "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash",
+        "terminal.integrated.profiles.linux": {
+            "bash": {
+                "path": "/bin/bash",
+                "icon": "terminal-bash"
+            },
+        },
+        "terminal.integrated.defaultProfile.linux": "bash",
         "emmet.includeLanguages": {
             "javascript": "javascriptreact"
         },
