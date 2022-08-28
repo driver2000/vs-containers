@@ -14,7 +14,7 @@
             },
         },
         "terminal.integrated.defaultProfile.linux": "bash",
-        "files.trimTrailingWhitespace": true,
+        "files.trimTrailingWhitespace": true
     },
     "postCreateCommand": "/workspace/ssh-postinstall.sh",
     "workspaceFolder": "/workspace/rust",
@@ -23,6 +23,6 @@
         "vadimcn.vscode-lldb",
         "bungcip.better-toml",
         "serayuzgur.crates",
-        "eamodio.gitlens",
+        "eamodio.gitlens"
     ]
 }
