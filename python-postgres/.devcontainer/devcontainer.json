@@ -18,6 +18,10 @@
         "python.linting.pylintEnabled": false,
         "python.linting.flake8Enabled": true,
         "python.linting.flake8Path": "flake8",
+        "python.linting.flake8Args": [
+            "--max-line-length=110",
+            "--ignore=E402,F841,F401,E302,E305"
+        ],
         "python.formatting.provider": "black",
         "python.languageServer": "Pylance",
         "python.formatting.blackArgs": [
